@@ -11,6 +11,7 @@
 	<groupId>com.sb</groupId>
 	<artifactId>SpringBoot-Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>SpringBoot-Demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -31,7 +32,8 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		
 		<dependency>
