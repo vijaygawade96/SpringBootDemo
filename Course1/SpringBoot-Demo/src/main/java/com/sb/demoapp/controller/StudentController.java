@@ -3,7 +3,10 @@ package com.sb.demoapp.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sb.demoapp.model.Student;
@@ -25,5 +28,14 @@ public class StudentController {
 		students.add(new Student("Varsha","Naik"));
 		
 		return students;
+	}
+	
+	@GetMapping(path = "/student/{id}")
+	public Student getStudentDetails(@PathVariable("id") int id) {
+		if(id == 1)
+			return new Student("Vijay", "Gawade");
+		else if(id==2)
+			return new Student("Varsha", "Naik");
+		return null;
 	}
 }
